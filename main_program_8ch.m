@@ -20,8 +20,8 @@ eegdata = data(:,2:9);          % EEG data
 auxdata = data(:,10:12);        % Aux data
 
 % General variables
-time = (0:4:length(eegdata))';  % Time vector
-N_ch = 8;                       % Number of channels
+time = (0:4:length(eegdata)*4-1)';  % Time vector
+N_ch = 8;                           % Number of channels
 
 % Band-pass Filtering Paramaters
 fsamp = 250;                    % Sampling frequency
@@ -37,13 +37,9 @@ end
 
 %% SAVE EEG DATA FOR EEGLAB
 % Save raw data (unfiltered data)
+save eegdata.txt eegdata -ascii;
 save('eegdata.mat','eegdata');
 
 % Save filterd data
+save EEG.txt EEG -ascii;
 save('EEG.mat','EEG');
-
-%% PROCESSING
-
-
-
-

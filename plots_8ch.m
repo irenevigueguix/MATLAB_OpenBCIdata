@@ -95,51 +95,51 @@ ylabel('Ampitude (\muV)');
 %% SIGNIFICANT EEG DATA 
 
 % OpenBCI 32bit Board
-figure('Name','Filtered EEG Data (OpenBCI 32bit Board)','NumberTitle','off')
+figure('Name','Non filtered EEG Data (OpenBCI 32bit Board)','NumberTitle','off')
 subplot (2,4,1)
-plot(time, EEG_1);
+plot(time, ch_1);
 title ('Channel 1');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,2)
-plot(time, EEG_2);
+plot(time, ch_2);
 title ('Channel 2');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,3)
-plot(time, EEG_3);
+plot(time, ch_3);
 title ('Channel 3');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,4)
-plot(time, EEG_4);
+plot(time, ch_4);
 title ('Channel 4');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,5)
-plot(time, EEG_5);
+plot(time, ch_5);
 title ('Channel 5');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,6)
-plot(time, EEG_6);
+plot(time, ch_6);
 title ('Channel 6');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,7)
-plot(time, EEG_7);
+plot(time, ch_7);
 title ('Channel 7');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
 subplot (2,4,8)
-plot(time, EEG_8);
+plot(time, ch_8);
 title ('Channel 8');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
@@ -194,6 +194,14 @@ ylabel('Ampitude (\muV)');
 subplot (2,4,8)
 plot(time, EEG_8);
 title ('Channel 8');
+xlabel('Time (ms)');
+ylabel('Ampitude (\muV)');
+
+%%
+figure('Name','Filtered EEG Data from all channels','NumberTitle','off')
+title('EEG Data filtered');
+plot(time, EEG);
+title ('Channels');
 xlabel('Time (ms)');
 ylabel('Ampitude (\muV)');
 
